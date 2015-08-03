@@ -45,7 +45,7 @@ class Budget(models.Model):
 		self.save()
 
 	def __str__(self):
-		return "%s budget of amount $%f" % (self.category_choices[self.category][1], self.amount)
+		return "%s, a %s budget of amount $%f" % (self.purpose, self.category_choices[self.category][1], self.amount)
 
 
 

@@ -10,16 +10,16 @@ from .models import Expense, Budget
 # show all budgets/expenses
 @login_required
 def all_expenses(request):
-	expenses = Expense.objects.filter(date__lte=timezone.now())
+	expenses = Expense.objects.filter(user=request.user)
 	return render(request, 'app_xspense/expenses.html', {'expenses': expenses})
 
 def overview(request):
-	budgets = Budget.objects.filter(category__gte=0)
+	budgets = Budget.objects.filter(user=request.user.id, category__gte=0)
 	return render(request, 'app_xspense/overview.html', {'budgets': budgets})
 
 @login_required
 def all_budgets(request):
-	budgets = Budget.objects.filter(category__gte=0)
+	budgets = Budget.objects.filter(user=request.user, category__gte=0)
 	return render(request, 'app_xspense/budgets.html', {'budgets': budgets})
 
 # Load forms
@@ -29,7 +29,9 @@ def new_budget(request):
 	if request.method == "POST":
 		form = BudgetForm(request.POST)
 		if form.is_valid():
-			form.save()
+			budget = form.save(commit=False)
+			budget.user = request.user
+			budget.save()
 			messages.success(request, 'Budget successfully recorded.')
 			return redirect('app_xspense.views.overview')
 	else:
@@ -43,11 +45,12 @@ def new_expense(request):
 		if form.is_valid():
 			expense = form.save(commit=False)
 			expense.user = request.user
+			#expense.budget.user.id = request.user.id
 			expense.save()
 			messages.success(request, 'Expense successfully recorded.')
 			return redirect('app_xspense.views.overview')
 	else:
-		form = ExpenseForm()
+		form = ExpenseForm(user=request.user)
 	return render(request, 'app_xspense/new_expense.html', {'form': form})
 
 

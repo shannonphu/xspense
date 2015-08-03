@@ -34,6 +34,7 @@ class Budget(models.Model):
 		(OTHER, 'other')
 		]
 	category = models.IntegerField(choices=category_choices, default=13)
+	user = models.ForeignKey('auth.User', null=True)
 	purpose = models.TextField()
 	amount = models.DecimalField(max_digits=9, decimal_places=2)
 	date_created = models.DateTimeField(
@@ -49,7 +50,7 @@ class Budget(models.Model):
 
 
 class Expense(models.Model):
-	user = models.ForeignKey('auth.User')
+	user = models.ForeignKey('auth.User', null=True)
 	budget = models.ForeignKey(Budget, on_delete=models.CASCADE, null=True, blank=True)
 	item = models.TextField()
 	price = models.DecimalField(max_digits=9, decimal_places=2)

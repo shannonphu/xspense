@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,12 +8,31 @@
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	<!-- My CSS Files -->
+	<link rel="stylesheet" href="{% static "css/xspense.css" %}">
+
 	<title>xspense</title>
 </head>
 <body>
+	<!-- NAV -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container">
+	    <a href="#">Home</a>
+	    {% if user.is_authenticated %}
+	    	<a href="logout">Logout</a><br />
+	    {% endif %}
+	  </div>
+	</nav>
+	<!-- END NAV -->
+	<div class="container">
 	{% block content %}
 	{% endblock %}
+	</div>
 </body>
 </html>

@@ -42,25 +42,16 @@ def new_budget(request):
 def new_expense(request):
 	if request.method == "POST":
 		form = ExpenseForm(request.user, data=request.POST)
-		print ("receive expense form")
 		if form.is_valid():
 			expense = form.save(commit=False)
 			expense.user = request.user
 			expense.save()
-			print ("valid expense")
 			messages.success(request, 'Expense successfully recorded.')
 			return redirect('app_xspense.views.overview')
 	else:
 		form = ExpenseForm(request.user)
 	return render(request, 'app_xspense/new_expense.html', {'form': form})
 
-
-# logout
-@login_required
-def user_logout(request):
-	logout(request)
-	messages.success(request, 'Successfully logged out.')
-	return HttpResponseRedirect('/')
 
 
 ## USER AUTHENIFICATION SYSTEM ##
@@ -144,6 +135,7 @@ def user_login(request):
                 # If the account is valid and active, we can log the user in.
                 # We'll send the user back to the homepage.
                 login(request, user)
+                messages.success(request, 'Successfully logged in.')
                 return HttpResponseRedirect('/')
             else:
                 # An inactive account was used - no logging in!
@@ -163,7 +155,12 @@ def user_login(request):
         return render(request, 'app_xspense/login.html', {})
 
 
-
+# logout
+@login_required
+def user_logout(request):
+    logout(request)
+    messages.success(request, 'Successfully logged out.')
+    return HttpResponseRedirect('/')
 
 
 

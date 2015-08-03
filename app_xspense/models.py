@@ -1,22 +1,6 @@
 from django.db import models
 from django.utils import timezone
 
-class Expense(models.Model):
-	user = models.ForeignKey('auth.User')
-	budget = models.ForeignKey(Budget)
-	item = models.TextField()
-	price = models.DecimalField(max_digits=9, decimal_places=2)
-	date = models.DateTimeField(
-		default=timezone.now)
-	location = models.TextField()
-
-	def publish(self):
-		self.date = timezone.now()
-		self.save()
-
-	def __str__(self):
-		return "%s bought at %s" % (self.item, self.location)
-
 class Budget(models.Model):
 	ELECTRONICS = 0
 	OFFICE = 1
@@ -60,3 +44,19 @@ class Budget(models.Model):
 
 	def __str__(self):
 		return "%s budget of amount $%f" % (self.category, self.amount)
+
+class Expense(models.Model):
+	user = models.ForeignKey('auth.User')
+	budget = models.ForeignKey(Budget)
+	item = models.TextField()
+	price = models.DecimalField(max_digits=9, decimal_places=2)
+	date = models.DateTimeField(
+		default=timezone.now)
+	location = models.TextField()
+
+	def publish(self):
+		self.date = timezone.now()
+		self.save()
+
+	def __str__(self):
+		return "%s bought at %s" % (self.item, self.location)

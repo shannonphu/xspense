@@ -1,18 +1,64 @@
 {% extends "app_xspense/base.html" %}
+{% load staticfiles %}
 
 {% block content %}
-
-	{% if messages %}
-	<ul class="messages">
-	    {% for msg in messages %}      
-	    <li>
-	        <div class="alert alert-{{msg.level_tag}}" role="alert">
-	    {{msg.message}}
-	    </div>
-	    </li>
-	    {% endfor %}
-	</ul>
+	{% if user.is_authenticated %}
+		{% if messages %}
+		<ul class="messages">
+		    {% for msg in messages %}      
+		    <li>
+		        <div class="alert alert-{{msg.level_tag}}" role="alert">
+		    {{msg.message}}
+		    </div>
+		    </li>
+		    {% endfor %}
+		</ul>
+		{% endif %}
 	{% endif %}
+
+	<!--login modal-->
+	
+	<div id="loginModal" class="modal show" tabindex="" role="dialog" aria-hidden="true">
+	  <div class="modal-dialog" style="margin-top:10%">
+	  <div class="modal-content">
+	      <div class="modal-header">
+	          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+	          {% if messages %}
+	          <ul class="messages">
+	              {% for msg in messages %}      
+	              <li>
+	                  <div class="alert alert-{{msg.level_tag}}" role="alert">
+	              {{msg.message}}
+	              </div>
+	              </li>
+	              {% endfor %}
+	          </ul>
+	          {% endif %}
+	          <h1 class="text-center">Login</h1>
+	      </div>
+	      <div class="modal-body">
+	          <form class="form col-md-12 center-block" id="login_form" method="post" action="/login">
+	            <div class="form-group">
+	            {% csrf_token %}
+	              <input type="text" class="form-control input-lg" placeholder="Username" name="username" value="" size="50">
+	            </div>
+	            <div class="form-group">
+	              <input type="password" name="password" value="" size="50" class="form-control input-lg" placeholder="Password"/>
+	            </div>
+	            <div class="form-group">
+	              <input class="btn btn-primary btn-lg btn-block" type="submit" value="Sign In" />
+	              <span class="pull-right"><a href="register">Register</a></span><span><a href="#">Need help?</a></span>
+	            </div>
+	          </form>
+	      </div>
+	      <div class="modal-footer">
+	          <div class="col-md-12">
+	          <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+	          </div>    
+	      </div>
+	  </div>
+	  </div>
+	</div>
 
 	{% if user.is_authenticated %}
 

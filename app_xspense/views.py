@@ -19,8 +19,16 @@ def all_budgets(request):
 	budgets = Budget.objects.filter(category__gte=0)
 	return render(request, 'app_xspense/budgets.html', {'budgets': budgets})
 
+# Load forms
+
 def new_budget(request):
-	form = BudgetForm()
+	if request.method == "POST":
+		form = BudgetForm(request.POST)
+		if form.is_valid():
+			form.save()
+			return redirect('app_xspense.views.overview')
+	else:
+		form = BudgetForm()
 	return render(request, 'app_xspense/new_budget.html', {'form': form})
 
 def new_expense(request):

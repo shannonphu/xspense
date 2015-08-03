@@ -1,34 +1,38 @@
-{% if user.is_authenticated %}
+{% extends "app_xspense/base.html" %}
 
-{% if messages %}
-<ul class="messages">
-    {% for msg in messages %}      
-    <li>
-        <div class="alert alert-{{msg.level_tag}}" role="alert">
-    {{msg.message}}
-    </div>
-    </li>
-    {% endfor %}
-</ul>
-{% endif %}
+{% block content %}
 
+	{% if messages %}
+	<ul class="messages">
+	    {% for msg in messages %}      
+	    <li>
+	        <div class="alert alert-{{msg.level_tag}}" role="alert">
+	    {{msg.message}}
+	    </div>
+	    </li>
+	    {% endfor %}
+	</ul>
+	{% endif %}
 
-{% for budget in budgets %}
-	<h2>{{ budget.purpose }}</h2>
-	<p>amount: {{ budget.amount }}</p>
-	<h3>Expenses</h3>
-	{% for expense in budget.expense_set.all %}
-		<p>item: {{ expense.item }}</p>
-		<p>price: ${{ expense.price }}</p>
-		---------------------------------
+	{% if user.is_authenticated %}
+
+	<a href="logout">Logout</a><br />
+
+	{% for budget in budgets %}
+		<h2>{{ budget.purpose }}</h2>
+		<p>amount: {{ budget.amount }}</p>
+		<h3>Expenses</h3>
+		{% for expense in budget.expense_set.all %}
+			<p>item: {{ expense.item }}</p>
+			<p>price: ${{ expense.price }}</p>
+			---------------------------------
+		{% endfor %}
+		<hr>
 	{% endfor %}
-	<hr>
-{% endfor %}
 
+	{% else %}
+	<a href="register">Sign Up</a><br />
+	<a href="login">Login</a><br />
+	{% endif %}
 
-
-<a href="logout">Logout</a><br />
-{% else %}
-<a href="register">Register Here</a><br />
-<a href="login">Login</a><br />
-{% endif %}
+{% endblock %}

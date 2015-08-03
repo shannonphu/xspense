@@ -1,3 +1,5 @@
+{% if user.is_authenticated %}
+
 {% for budget in budgets %}
 	<h2>{{ budget.purpose }}</h2>
 	<p>amount: {{ budget.amount }}</p>
@@ -9,3 +11,11 @@
 	{% endfor %}
 	<hr>
 {% endfor %}
+
+
+
+<a href="logout">Logout</a><br />
+{% else %}
+<a href="register">Register Here</a><br />
+<a href="login">Login</a><br />
+{% endif %}

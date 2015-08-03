@@ -1,11 +1,13 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect, HttpResponse
 from django.utils import timezone
 from .forms import BudgetForm, ExpenseForm, UserForm, UserProfileForm
 from .models import Expense, Budget
 
-# Create your views here.
+# show all budgets/expenses
+@login_required
 def all_expenses(request):
 	expenses = Expense.objects.filter(date__lte=timezone.now())
 	return render(request, 'app_xspense/expenses.html', {'expenses': expenses})
@@ -14,12 +16,14 @@ def overview(request):
 	budgets = Budget.objects.filter(category__gte=0)
 	return render(request, 'app_xspense/overview.html', {'budgets': budgets})
 
+@login_required
 def all_budgets(request):
 	budgets = Budget.objects.filter(category__gte=0)
 	return render(request, 'app_xspense/budgets.html', {'budgets': budgets})
 
 # Load forms
 
+@login_required
 def new_budget(request):
 	if request.method == "POST":
 		form = BudgetForm(request.POST)
@@ -30,6 +34,7 @@ def new_budget(request):
 		form = BudgetForm()
 	return render(request, 'app_xspense/new_budget.html', {'form': form})
 
+@login_required
 def new_expense(request):
 	if request.method == "POST":
 		form = ExpenseForm(request.POST)
@@ -43,7 +48,11 @@ def new_expense(request):
 	return render(request, 'app_xspense/new_expense.html', {'form': form})
 
 
-
+# logout
+@login_required
+def user_logout(request):
+	logout(request)
+	return HttpResponseRedirect('/')
 
 
 ## USER AUTHENIFICATION SYSTEM ##

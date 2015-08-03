@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
+from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect, HttpResponse
@@ -29,6 +30,7 @@ def new_budget(request):
 		form = BudgetForm(request.POST)
 		if form.is_valid():
 			form.save()
+			messages.success(request, 'Budget successfully recorded.')
 			return redirect('app_xspense.views.overview')
 	else:
 		form = BudgetForm()
@@ -42,6 +44,7 @@ def new_expense(request):
 			expense = form.save(commit=False)
 			expense.user = request.user
 			expense.save()
+			messages.success(request, 'Expense successfully recorded.')
 			return redirect('app_xspense.views.overview')
 	else:
 		form = ExpenseForm()
@@ -52,6 +55,7 @@ def new_expense(request):
 @login_required
 def user_logout(request):
 	logout(request)
+	messages.success(request, 'Successfully logged out.')
 	return HttpResponseRedirect('/')
 
 
@@ -139,11 +143,13 @@ def user_login(request):
                 return HttpResponseRedirect('/')
             else:
                 # An inactive account was used - no logging in!
-                return HttpResponse("Your account is disabled.")
+                messages.error(request, 'Your account is disabled.')
+                return HttpResponseRedirect('login')
         else:
             # Bad login details were provided. So we can't log the user in.
             # print "Invalid login details: {0}, {1}".format(username, password)
-            return HttpResponse("Invalid login details supplied.")
+            messages.error(request, 'Invalid login details supplied.')
+            return HttpResponseRedirect('login')
 
     # The request is not a HTTP POST, so display the login form.
     # This scenario would most likely be a HTTP GET.

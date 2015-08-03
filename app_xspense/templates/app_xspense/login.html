@@ -2,6 +2,17 @@
 <h1>hello {{ user.username }}!</h1>
 {% else %}
 <h1>hello world!</h1>
+{% if messages %}
+<ul class="messages">
+    {% for msg in messages %}      
+    <li>
+        <div class="alert alert-{{msg.level_tag}}" role="alert">
+    {{msg.message}}
+    </div>
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
 {% endif %}
 
 <h1>Login</h1>

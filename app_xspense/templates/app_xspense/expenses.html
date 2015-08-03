@@ -1,8 +1,13 @@
-{% for expense in expenses %}
-	<h2>{{ expense.item }}</h2>
-	<p>in budget: {{ expense.budget }}</p>
-	<p>price: {{ expense.price }}</p>
-	<date>date: {{ expense.date|date }}</date>
-	<p>location: {{ expense.location }}</p>
-	<hr>
-{% endfor %}
+{% extends "app_xspense/base.html" %}
+
+{% block content %}
+	<h1>Expenses</h1>
+	{% for expense in expenses %}
+		<h2>{{ expense.item }}</h2>
+		<p>in budget: {{ expense.budget }}</p>
+		<p>price: {{ expense.price }}</p>
+		<date>date: {{ expense.date|date }}</date>
+		<p>location: {{ expense.location }}</p>
+		<hr>
+	{% endfor %}
+{% endblock %}

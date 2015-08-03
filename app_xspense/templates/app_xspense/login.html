@@ -1,18 +1,21 @@
+{% extends "app_xspense/base.html" %}
+
+{% block content %}
 {% if user.is_authenticated %}
-<h1>hello {{ user.username }}!</h1>
+    <h1>Hello, {{ user.username }}!</h1>
 {% else %}
-<h1>hello world!</h1>
-{% if messages %}
-<ul class="messages">
-    {% for msg in messages %}      
-    <li>
-        <div class="alert alert-{{msg.level_tag}}" role="alert">
-    {{msg.message}}
-    </div>
-    </li>
-    {% endfor %}
-</ul>
-{% endif %}
+    <h1>xspense | manage your exspenses</h1>
+    {% if messages %}
+    <ul class="messages">
+        {% for msg in messages %}      
+        <li>
+            <div class="alert alert-{{msg.level_tag}}" role="alert">
+        {{msg.message}}
+        </div>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
 {% endif %}
 
 <h1>Login</h1>
@@ -26,3 +29,5 @@
 
             <input type="submit" value="submit" />
         </form>
+        <a href="register">Sign Up</a>
+{% endblock %}

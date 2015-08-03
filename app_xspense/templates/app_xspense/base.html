@@ -26,6 +26,8 @@
 	    <a href="#">Home</a>
 	    {% if user.is_authenticated %}
 	    	<a href="logout">Logout</a><br />
+	    {% else %}
+		    <a href="login">Login</a><br />
 	    {% endif %}
 	  </div>
 	</nav>

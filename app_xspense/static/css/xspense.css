@@ -1,7 +1,16 @@
 body {
-  margin-top: 5%; }
+  margin-top: 10%; }
 
 .messages li {
   list-style-type: none; }
+
+.errorlist li {
+  background-color: darksalmon;
+  list-style-type: none;
+  border-radius: 10px;
+  text-align: center; }
+
+form {
+  width: 50%; }
 
 /*# sourceMappingURL=xspense.css.map */

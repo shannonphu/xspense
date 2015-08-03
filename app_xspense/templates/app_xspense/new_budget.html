@@ -1,6 +1,10 @@
-<h2>New Budget</h2>
+{% extends "app_xspense/base.html" %}
 
-<form method="POST" class="post-form">{% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Save</button>
-</form>
+{% block content %}
+	<h2>New Budget</h2>
+
+	<form method="POST" class="post-form">{% csrf_token %}
+	    {{ form.as_p }}
+	    <button type="submit">Save</button>
+	</form>
+{% endblock %}

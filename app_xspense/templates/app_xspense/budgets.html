@@ -1,5 +1,10 @@
-{% for budget in budgets %}
-	<h2>{{ budget.purpose }}</h2>
-	<p>amount: {{ budget.amount }}</p>
-	<hr>
-{% endfor %}
+{% extends "app_xspense/base.html" %}
+
+{% block content %}
+	<h1>Budgets</h1>
+	{% for budget in budgets %}
+		<h2>{{ budget.purpose }}</h2>
+		<p>amount: {{ budget.amount }}</p>
+		<hr>
+	{% endfor %}
+{% endblock %}

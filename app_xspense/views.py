@@ -1,5 +1,8 @@
 from django.shortcuts import render
+from django.utils import timezone
+from .models import Expense
 
 # Create your views here.
 def all_expenses(request):
-	return render(request, 'app_xspense/expenses.html', {})
+	expenses = Expense.objects.filter(date__lte=timezone.now())
+	return render(request, 'app_xspense/expenses.html', {'expenses': expenses})

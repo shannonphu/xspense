@@ -1,0 +1,11 @@
+{% for budget in budgets %}
+	<h2>{{ budget.purpose }}</h2>
+	<p>amount: {{ budget.amount }}</p>
+	<h3>Expenses</h3>
+	{% for expense in budget.expense_set.all %}
+		<p>item: {{ expense.item }}</p>
+		<p>price: ${{ expense.price }}</p>
+		---------------------------------
+	{% endfor %}
+	<hr>
+{% endfor %}

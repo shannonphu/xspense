@@ -8,6 +8,10 @@ def all_expenses(request):
 	expenses = Expense.objects.filter(date__lte=timezone.now())
 	return render(request, 'app_xspense/expenses.html', {'expenses': expenses})
 
+def overview(request):
+	budgets = Budget.objects.filter(category__gte=0)
+	return render(request, 'app_xspense/overview.html', {'budgets': budgets})
+
 def all_budgets(request):
 	budgets = Budget.objects.filter(category__gte=0)
 	return render(request, 'app_xspense/budgets.html', {'budgets': budgets})

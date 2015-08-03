@@ -16,7 +16,7 @@ class Budget(models.Model):
 	AUTO = 11
 	GIFTS = 12
 	OTHER = 13
-	category_choices = (
+	category_choices = [
 		(ELECTRONICS, 'electronics'),
 		(OFFICE, 'office'),
 		(ENTERTAINMENT, 'entertainment'),
@@ -31,7 +31,7 @@ class Budget(models.Model):
 		(AUTO, 'auto'),
 		(GIFTS, 'gifts'),
 		(OTHER, 'other')
-		)
+		]
 	category = models.IntegerField(choices=category_choices, default=13)
 	purpose = models.TextField()
 	amount = models.DecimalField(max_digits=9, decimal_places=2)
@@ -43,7 +43,7 @@ class Budget(models.Model):
 		self.save()
 
 	def __str__(self):
-		return "%s budget of amount $%f" % (self.category, self.amount)
+		return "%s budget of amount $%f" % (self.category_choices[self.category][1], self.amount)
 
 class Expense(models.Model):
 	user = models.ForeignKey('auth.User')

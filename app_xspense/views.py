@@ -41,16 +41,17 @@ def new_budget(request):
 @login_required
 def new_expense(request):
 	if request.method == "POST":
-		form = ExpenseForm(request.POST)
+		form = ExpenseForm(request.user, data=request.POST)
+		print ("receive expense form")
 		if form.is_valid():
 			expense = form.save(commit=False)
 			expense.user = request.user
-			#expense.budget.user.id = request.user.id
 			expense.save()
+			print ("valid expense")
 			messages.success(request, 'Expense successfully recorded.')
 			return redirect('app_xspense.views.overview')
 	else:
-		form = ExpenseForm(user=request.user)
+		form = ExpenseForm(request.user)
 	return render(request, 'app_xspense/new_expense.html', {'form': form})
 
 

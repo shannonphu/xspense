@@ -12,10 +12,9 @@ class ExpenseForm(forms.ModelForm):
 		model = Expense
 		fields = ('item', 'budget', 'price', 'location')
 
-	def __init__(self, user=None, **kwargs):
+	def __init__(self, user, *args, **kwargs):
 		super(ExpenseForm, self).__init__(**kwargs)
-		if user:
-			self.fields['budget'].queryset = Budget.objects.filter(user=user)
+		self.fields['budget'].queryset = Budget.objects.filter(user=user)
 
 class UserForm(forms.ModelForm):
 	password = forms.CharField(widget=forms.PasswordInput())

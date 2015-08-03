@@ -47,7 +47,7 @@ class Budget(models.Model):
 
 class Expense(models.Model):
 	user = models.ForeignKey('auth.User')
-	budget = models.ForeignKey(Budget)
+	budget = models.ForeignKey(Budget, on_delete=models.CASCADE, null=True, blank=True)
 	item = models.TextField()
 	price = models.DecimalField(max_digits=9, decimal_places=2)
 	date = models.DateTimeField(

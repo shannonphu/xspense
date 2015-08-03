@@ -32,5 +32,13 @@ def new_budget(request):
 	return render(request, 'app_xspense/new_budget.html', {'form': form})
 
 def new_expense(request):
-	form = ExpenseForm()
+	if request.method == "POST":
+		form = ExpenseForm(request.POST)
+		if form.is_valid():
+			expense = form.save(commit=False)
+			expense.user = request.user
+			expense.save()
+			return redirect('app_xspense.views.overview')
+	else:
+		form = ExpenseForm()
 	return render(request, 'app_xspense/new_expense.html', {'form': form})

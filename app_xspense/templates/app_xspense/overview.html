@@ -14,26 +14,27 @@
 		    {% endfor %}
 		</ul>
 		{% endif %}
-
+		<div id="budget-expense">
 		{% for budget in budgets %}
-		<div class="budget">
-			<div class="info">
-				<h2 class="purpose">{{ budget.purpose|title }}</h2>
-				<p class="amount">Budget Amount: {{ budget.amount }}</p>
-			</div>
-			<h3>Expenses</h3>
-			<div class="row">
-			{% for expense in budget.expense_set.all %}
-				<div class="col-sm-2 col-xs-3 exspense">
-					<p class="item row">{{ expense.item|title }}</p>
-					<p class="location row">{{ expense.location|title }}</p>
-					<p class="price row">${{ expense.price }}</p>
+			<div class="medium-6 large-3 columns budget">
+				<div class="budget-info">
+					<h2 class="purpose">{{ budget.purpose|title }}</h2>
+					<p class="amount">Budget Amount: {{ budget.amount }}</p>
 				</div>
-			{% endfor %}
+				<div class="expense-info">
+					<h3>Expenses</h3>
+					
+					{% for expense in budget.expense_set.all %}
+						<div class="exspense">
+							<div class="item">{{ expense.item|title }}</div>
+							<div class="location">{{ expense.location|title }}</div>
+							<div class="price">${{ expense.price }}</div>
+						</div>
+					{% endfor %}
+				</div>
 			</div>
-		</div>
 		{% endfor %}
-
+		</div>
 	{% else %}
 	{% if messages %}
 	<ul class="messages">

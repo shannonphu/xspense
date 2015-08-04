@@ -2,8 +2,13 @@ $nav-color: navy;
 $nav-button-color: lightgrey;
 $white-opacity: rgba(255,255,255,0.5);
 
+.info {
+	background-color: black;
+}
+
 body {
 	margin-top: 100px;
+	//padding: 10px;
 }
 
 // FLASH CSS
@@ -11,6 +16,9 @@ body {
 .messages {
 	li {
 		list-style-type: none;
+	}
+	ul {
+		margin-left: 0;
 	}
 	.alert {
 		background-color: #f2dede;
@@ -40,14 +48,18 @@ form {
 }
 
 // BUDGET POST CSS
-.budget {
+/*.budget {
 	background-color: lightgrey;
-	padding: 25px 35px 25px 35px;
-	margin-bottom: 40px;
+	//margin: 0 10px 30px 0;
 	border-radius: 15px;
 	text-align: center;
-	.info {
+	//padding: 0;
+	.budget-info {
 		background-color: darkgrey;
+		//padding: 10px 0 10px 0;
+	}
+	.expense-info {
+		//padding: 10px;
 	}
 	h2 {
 		margin: 0;
@@ -57,23 +69,23 @@ form {
 		text-align: left;
 	}
 	.exspense {
-		margin: 0 10px 10px 0;
+		//margin: 0 10px 10px 0;
 		border-radius: 10px;
 		text-align: center;
 		.item {
 			background-color: lightblue;
-			padding: 5px;
+			//padding: 5px;
 			margin-bottom: 0;
 		}
 		.location {
 			background-color: lightyellow;
-			padding: 5px;
+			//padding: 5px;
 			margin-bottom: 0;
 		}
 		.price {
 			background-color: $white-opacity;
-			padding: 5px;
+			//padding: 5px;
 			margin-bottom: 0;
 		}
 	}
-}
+}*/

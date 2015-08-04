@@ -114,6 +114,7 @@ def register(request):
 
 
 def user_login(request):
+
     # If the request is a HTTP POST, try to pull out the relevant information.
     if request.method == 'POST':
         # Gather the username and password provided by the user.
@@ -151,7 +152,7 @@ def user_login(request):
     else:
         # No context variables to pass to the template system, hence the
         # blank dictionary object...
-        return render(request, 'app_xspense/login.html', {})
+        return render(request, 'app_xspense/overview.html', {})
 
 
 # logout

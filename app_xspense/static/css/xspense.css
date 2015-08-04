@@ -1,13 +1,31 @@
 body {
   margin-top: 100px; }
 
+h1 {
+  font-family: 'Righteous', cursive; }
+
 h2, h5 {
   font-family: 'Handlee', cursive; }
+
+p {
+  font-family: 'Titillium Web', sans-serif; }
 
 .row {
   margin: 0 0.8333rem 0 0.8333rem;
   width: auto;
   max-width: 100%; }
+
+.landing {
+  margin-top: -100px;
+  min-width: 250px;
+  padding-right: 25%;
+  height: 100%;
+  text-align: center;
+  background: url(../img/walkway.jpg) repeat-y center center;
+  background-size: cover;
+  -webkit-mask-image: -webkit-gradient(linear, left top, right top, from(black), color-stop(0.5, black), to(transparent)); }
+  .landing h1 {
+    color: rgba(255, 255, 255, 0.5); }
 
 nav .navbar-brand {
   font-family: 'Righteous', cursive;

@@ -1,10 +1,13 @@
 {% extends "app_xspense/base.html" %}
 
 {% block content %}
+<div class="container">
 	<h1>Budgets</h1>
 	{% for budget in budgets %}
-		<h2>{{ budget.purpose }}</h2>
+		<h3>{{ budget.purpose }} | {{ budget.category }}</h3>
 		<p>amount: {{ budget.amount }}</p>
+		<p>{{ budget.date_created }}</p>
 		<hr>
 	{% endfor %}
+</div>
 {% endblock %}

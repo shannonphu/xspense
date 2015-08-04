@@ -7,14 +7,37 @@ body {
 	margin-top: 100px;
 }
 
+h1 {
+	font-family: 'Righteous', cursive;
+}
+
 h2, h5 {
 	font-family: 'Handlee', cursive;
 }
 
+p {
+	font-family: 'Titillium Web', sans-serif;
+}
+
 .row {
 	margin: 0 0.8333rem 0 0.8333rem;
-    width: auto;
-    max-width: 100%;
+	width: auto;
+	max-width: 100%;
+}
+
+.landing {
+  margin-top: -100px;
+  min-width: 250px;
+  padding-right: 25%;
+  height: 100%;
+  text-align: center;
+  background: url(../img/walkway.jpg) repeat-y center center;
+  background-size: cover;
+  -webkit-mask-image: -webkit-gradient(linear, left top, right top, from(rgba(0,0,0,1)), color-stop(0.5, rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+
+  h1 {
+	color: $white-opacity;
+  }
 }
 
 // NAV BAR CSS
@@ -85,9 +108,9 @@ div.hidden {
 }
 
 .modal-footer {
-    padding: 15px;
-    text-align: right;
-    border-top: none;
+	padding: 15px;
+	text-align: right;
+	border-top: none;
 }
 
 // BUDGET POST CSS

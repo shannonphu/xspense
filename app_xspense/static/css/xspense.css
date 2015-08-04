@@ -1,9 +1,18 @@
-.info {
-  background-color: black; }
-
 body {
-  margin-top: 100px;
-  padding: 20px; }
+  margin-top: 100px; }
+
+.row {
+  margin: 0 0.8333rem 0 0.8333rem;
+  width: auto;
+  max-width: 100%; }
+
+nav .navbar-brand {
+  font-family: 'Righteous', cursive;
+  font-size: 1.8em; }
+nav .nav a {
+  font-family: 'Exo', sans-serif;
+  margin-top: 3px;
+  font-weight: 600; }
 
 .messages li {
   list-style-type: none; }
@@ -47,49 +56,23 @@ div.hidden {
   text-align: right;
   border-top: none; }
 
-.budget {
-  background-color: lightgrey; }
-
-/*.budget {
-	background-color: lightgrey;
-	//margin: 0 10px 30px 0;
-	border-radius: 15px;
-	text-align: center;
-	//padding: 0;
-	.budget-info {
-		background-color: darkgrey;
-		//padding: 10px 0 10px 0;
-	}
-	.expense-info {
-		//padding: 10px;
-	}
-	h2 {
-		margin: 0;
-		padding: 0;
-	}
-	h3 {
-		text-align: left;
-	}
-	.exspense {
-		//margin: 0 10px 10px 0;
-		border-radius: 10px;
-		text-align: center;
-		.item {
-			background-color: lightblue;
-			//padding: 5px;
-			margin-bottom: 0;
-		}
-		.location {
-			background-color: lightyellow;
-			//padding: 5px;
-			margin-bottom: 0;
-		}
-		.price {
-			background-color: $white-opacity;
-			//padding: 5px;
-			margin-bottom: 0;
-		}
-	}
-}*/
+.budgets {
+  background-color: lightgrey;
+  border-radius: 15px;
+  text-align: center;
+  margin-bottom: 1em; }
+  .budgets .budget-info {
+    background-color: darkgrey; }
+  .budgets h3 {
+    text-align: left; }
+  .budgets .exspense {
+    border-radius: 10px;
+    text-align: center; }
+    .budgets .exspense .item {
+      background-color: lightblue; }
+    .budgets .exspense .location {
+      background-color: lightyellow; }
+    .budgets .exspense .price {
+      background-color: rgba(255, 255, 255, 0.5); }
 
 /*# sourceMappingURL=xspense.css.map */

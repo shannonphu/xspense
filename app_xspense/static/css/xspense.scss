@@ -3,14 +3,29 @@ $nav-button-color: lightgrey;
 $white-opacity: rgba(255,255,255,0.5);
 $warning-color: #f2dede;
 
-.info {
-	background-color: black;
-}
-
 body {
 	margin-top: 100px;
-	padding: 20px;
 }
+
+.row {
+	margin: 0 0.8333rem 0 0.8333rem;
+    width: auto;
+    max-width: 100%;
+}
+
+// NAV BAR CSS
+nav {
+	.navbar-brand {
+		font-family: 'Righteous', cursive;
+		font-size: 1.8em;
+	}
+	.nav a {
+		font-family: 'Exo', sans-serif;
+		margin-top: 3px;
+		font-weight: 600;
+	}
+}
+
 
 // FLASH CSS
 
@@ -73,48 +88,36 @@ div.hidden {
 
 // BUDGET POST CSS
 .budget {
-	background-color: lightgrey;
+	//background-color: lightgrey;
 }
 
 
-/*.budget {
+.budgets {
 	background-color: lightgrey;
-	//margin: 0 10px 30px 0;
 	border-radius: 15px;
 	text-align: center;
-	//padding: 0;
+	margin-bottom: 1em;
 	.budget-info {
 		background-color: darkgrey;
-		//padding: 10px 0 10px 0;
 	}
 	.expense-info {
 		//padding: 10px;
 	}
-	h2 {
-		margin: 0;
-		padding: 0;
-	}
+
 	h3 {
 		text-align: left;
 	}
 	.exspense {
-		//margin: 0 10px 10px 0;
 		border-radius: 10px;
 		text-align: center;
 		.item {
 			background-color: lightblue;
-			//padding: 5px;
-			margin-bottom: 0;
 		}
 		.location {
 			background-color: lightyellow;
-			//padding: 5px;
-			margin-bottom: 0;
 		}
 		.price {
 			background-color: $white-opacity;
-			//padding: 5px;
-			margin-bottom: 0;
 		}
 	}
-}*/
+}

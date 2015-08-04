@@ -1,5 +1,9 @@
 body {
-  margin-top: 100px; }
+  margin-top: 100px;
+  background-color: #F2E9E4; }
+
+html, body {
+  height: 100%; }
 
 h1 {
   font-family: 'Righteous', cursive; }
@@ -35,16 +39,17 @@ nav .nav a {
   margin-top: 3px;
   font-weight: 600; }
 
-.messages li {
-  list-style-type: none; }
-.messages ul {
-  margin-left: 0; }
-.messages .alert {
-  background-color: #f2dede; }
+.messages {
+  z-index: 10; }
+  .messages li {
+    list-style-type: none; }
+  .messages .alert {
+    background-color: #FEEFB3;
+    margin: 0 5% 0 80%; }
 
 .errorlist {
   list-style-type: none;
-  background-color: #f2dede;
+  background-color: #FEEFB3;
   text-align: center;
   padding: 5px;
   border-radius: 5px;
@@ -56,6 +61,9 @@ form {
   form input[type="url"],
   form input[type="file"] {
     margin: 0; }
+
+.modal-content {
+  background-color: rgba(255, 255, 255, 0.5); }
 
 div.hidden {
   display: none; }

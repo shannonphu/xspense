@@ -1,11 +1,16 @@
 $nav-color: navy;
 $nav-button-color: lightgrey;
 $white-opacity: rgba(255,255,255,0.5);
-$warning-color: #f2dede;
+$warning-color: #FEEFB3;
 
 body {
 	margin-top: 100px;
+	background-color: #F2E9E4;
 }
+
+html, body {
+height:100%;
+} 
 
 h1 {
 	font-family: 'Righteous', cursive;
@@ -57,14 +62,13 @@ nav {
 // FLASH CSS
 
 .messages {
+	z-index: 10;
 	li {
 		list-style-type: none;
 	}
-	ul {
-		margin-left: 0;
-	}
 	.alert {
 		background-color: $warning-color;
+		margin: 0 5% 0 80%;
 	}
 }
 
@@ -86,6 +90,10 @@ form {
 	input[type="file"] {
 		margin: 0;
 	}
+}
+
+.modal-content {
+	background-color: $white-opacity;
 }
 
 div.hidden {

@@ -1,9 +1,12 @@
 $nav-color: navy;
 $nav-button-color: lightgrey;
+$white-opacity: rgba(255,255,255,0.5);
 
 body {
-	margin-top: 10%;
+	margin-top: 100px;
 }
+
+// FLASH CSS
 
 .messages {
 	li {
@@ -13,6 +16,8 @@ body {
 		background-color: #f2dede;
 	}
 }
+
+// LOGIN FORM CSS
 
 form {
 	width: 50%;
@@ -34,14 +39,41 @@ form {
     border-top: none;
 }
 
-.navbar-default {
-	//background-image: none;
-	//background-color: $nav-color;
-	.navbar-toggle {
-		//background-color: $nav-button-color;
-		//border-color: $nav-button-color;
+// BUDGET POST CSS
+.budget {
+	background-color: lightgrey;
+	padding: 25px 35px 25px 35px;
+	margin-bottom: 40px;
+	border-radius: 15px;
+	text-align: center;
+	.info {
+		background-color: darkgrey;
 	}
-	.active a {
-		//background-color: rgba(255,255,255,0.5);
+	h2 {
+		margin: 0;
+		padding: 0;
+	}
+	h3 {
+		text-align: left;
+	}
+	.exspense {
+		margin: 0 10px 10px 0;
+		border-radius: 10px;
+		text-align: center;
+		.item {
+			background-color: lightblue;
+			padding: 5px;
+			margin-bottom: 0;
+		}
+		.location {
+			background-color: lightyellow;
+			padding: 5px;
+			margin-bottom: 0;
+		}
+		.price {
+			background-color: $white-opacity;
+			padding: 5px;
+			margin-bottom: 0;
+		}
 	}
 }

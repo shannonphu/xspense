@@ -16,15 +16,22 @@
 		{% endif %}
 
 		{% for budget in budgets %}
-			<h2>{{ budget.purpose }}</h2>
-			<p>amount: {{ budget.amount }}</p>
+		<div class="budget">
+			<div class="info">
+				<h2 class="purpose">{{ budget.purpose|title }}</h2>
+				<p class="amount">Budget Amount: {{ budget.amount }}</p>
+			</div>
 			<h3>Expenses</h3>
+			<div class="row">
 			{% for expense in budget.expense_set.all %}
-				<p>item: {{ expense.item }}</p>
-				<p>price: ${{ expense.price }}</p>
-				---------------------------------
+				<div class="col-sm-2 col-xs-3 exspense">
+					<p class="item row">{{ expense.item|title }}</p>
+					<p class="location row">{{ expense.location|title }}</p>
+					<p class="price row">${{ expense.price }}</p>
+				</div>
 			{% endfor %}
-			<hr>
+			</div>
+		</div>
 		{% endfor %}
 
 	{% else %}
@@ -39,6 +46,7 @@
 	    {% endfor %}
 	</ul>
 	{% endif %}
+
 	<!-- LOGIN POPUP -->
 	<div id="login-form">
 	<div id="loginModal" class="modal show" tabindex="" role="dialog" aria-hidden="true">
@@ -81,4 +89,5 @@
     });
   });
 </script>
+
 {% endblock %}

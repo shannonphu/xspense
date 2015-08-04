@@ -1,6 +1,7 @@
 $nav-color: navy;
 $nav-button-color: lightgrey;
 $white-opacity: rgba(255,255,255,0.5);
+$warning-color: #f2dede;
 
 .info {
 	background-color: black;
@@ -8,7 +9,7 @@ $white-opacity: rgba(255,255,255,0.5);
 
 body {
 	margin-top: 100px;
-	//padding: 10px;
+	padding: 20px;
 }
 
 // FLASH CSS
@@ -21,19 +22,37 @@ body {
 		margin-left: 0;
 	}
 	.alert {
-		background-color: #f2dede;
+		background-color: $warning-color;
 	}
+}
+
+.errorlist {
+	list-style-type: none;
+	background-color: $warning-color;
+	text-align: center;
+	padding: 5px;
+	border-radius: 5px;
+	font-size: 0.9em;
 }
 
 // LOGIN FORM CSS
 
 form {
 	width: 50%;
+	input[type="text"],
+	input[type="url"],
+	input[type="file"] {
+		margin: 0;
+	}
 }
 
-div.hidden
-{
+div.hidden {
    display: none
+}
+
+.helptext {
+	font-size: 0.7em;
+	float: right;
 }
 
 .modal-body {

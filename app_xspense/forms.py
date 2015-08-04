@@ -21,6 +21,7 @@ class UserForm(forms.ModelForm):
 	def __init__(self, *args, **kwargs):
 			super(UserForm, self).__init__(*args, **kwargs)
 			self.fields['email'].required = True
+			self.fields['username'].help_text = '30 characters maximum'
 	class Meta:
 		model = User
 		fields = ('username', 'email', 'password')
@@ -29,3 +30,7 @@ class UserProfileForm(forms.ModelForm):
 	class Meta:
 		model = UserProfile
 		fields = ('website', 'picture')
+	def __init__(self, *args, **kwargs):
+			super(UserProfileForm, self).__init__(*args, **kwargs)
+			self.fields['website'].help_text = 'optional'
+			self.fields['picture'].help_text = 'optional'

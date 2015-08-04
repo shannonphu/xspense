@@ -3,6 +3,7 @@
 
 {% block content %}
 	{% if user.is_authenticated %}
+		<!-- SHOW FLASHES -->
 		{% if messages %}
 		<ul class="messages">
 		    {% for msg in messages %}      
@@ -14,13 +15,15 @@
 		    {% endfor %}
 		</ul>
 		{% endif %}
+
+		<!-- SHOW BUDGET/EXPENSES OVERVIEW -->
 		<div id="budget-expense">
 		{% for budget in budgets %}
 			<div class="medium-6 large-3 columns budget">
 				<div class="budgets">
 				<div class="budget-info">
 					<h2 class="purpose">{{ budget.purpose|title }}</h2>
-					<p class="amount">Budget Amount: ${{ budget.amount }}</p>
+					<h5 class="amount">Budget Amount: ${{ budget.amount }}</h5>
 				</div>
 				<div class="expense-info">
 					<h3>Expenses</h3>

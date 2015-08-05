@@ -1,17 +1,13 @@
 $nav-color: navy;
 $nav-button-color: lightgrey;
 $white-opacity: rgba(255,255,255,0.5);
+$black-opacity: rgba(0,0,0,0.5);
 $warning-color: #FEEFB3;
 
 body {
 	margin-top: 100px;
-	//background-color: #5CA4A9;
-	background: url(../img/stardust.png);
+	background: url(../img/fixed.png);
 }
-
-html, body {
-height:100%;
-} 
 
 h1 {
 	font-family: 'Righteous', cursive;
@@ -29,6 +25,12 @@ p {
 	margin: 0 0.8333rem 0 0.8333rem;
 	width: auto;
 	max-width: 100%;
+}
+
+.btn {
+	background-color: $white-opacity;
+	border-radius: 20px;
+	font-family: 'Titillium Web', sans-serif;
 }
 
 .landing {
@@ -124,7 +126,7 @@ div.hidden {
 	border-top: none;
 }
 
-// BUDGET POST CSS
+// BUDGET POST OVERVIEW CSS
 .budget {
 	margin-bottom: 2em;
 	font-family: 'Handlee', cursive;
@@ -164,3 +166,21 @@ div.hidden {
 		}
 	}
 }
+
+// BUDGET PAGE CSS
+.budget-page-budget {
+	background-color: $white-opacity;
+	margin-bottom: 2em;
+	padding: 1em;
+}
+
+#budgets-title {
+	text-align: center;
+	padding: 0.5em;
+	color: $white-opacity;
+	-webkit-text-stroke: 2px $black-opacity;
+}
+
+
+
+

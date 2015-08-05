@@ -1,13 +1,12 @@
 {% extends "app_xspense/base.html" %}
 
 {% block content %}
-<div class="row">
-	<h1>Budgets</h1>
+	<h1 id="budgets-title">Budgets</h1>
 	{% for budget in budgets %}
-		<h3>{{ budget.purpose }} | {{ budget.category }}</h3>
-		<p>amount: {{ budget.amount }}</p>
-		<p>{{ budget.date_created }}</p>
-		<hr>
+		<div class="budget-page-budget container" style="width: 90%">
+			<h3>{{ budget.purpose|title }} | {{ budget.category }}</h3>
+			<p>Budget Amount: ${{ budget.amount }}</p>
+			<p>Date Created: {{ budget.date_created|date:"m/d/Y" }}</p>
+		</div>
 	{% endfor %}
-</div>
 {% endblock %}

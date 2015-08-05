@@ -3,12 +3,12 @@
 {% block content %}
 
 
-<form method="POST" class="post-form form col-md-12 center-block">
+<form method="POST" class="post-form form container" style="width: 70%">
 	<h2>New Expense</h2>
 	{% csrf_token %}
     {{ form.as_p }}
     <div class="form-group">
-      <input class="btn btn-primary btn-lg btn-block" type="submit" value="Save" name="submit" />
+      <input class="btn btn-lg btn-block" type="submit" value="Save" name="submit" />
     </div>
 </form>
 {% endblock %}

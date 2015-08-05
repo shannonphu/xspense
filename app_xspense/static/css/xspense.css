@@ -1,6 +1,6 @@
 body {
   margin-top: 100px;
-  background-color: #F2E9E4; }
+  background: url(../img/stardust.png); }
 
 html, body {
   height: 100%; }
@@ -8,7 +8,7 @@ html, body {
 h1 {
   font-family: 'Righteous', cursive; }
 
-h2, h5 {
+h2, h3, h5 {
   font-family: 'Handlee', cursive; }
 
 p {
@@ -26,7 +26,7 @@ p {
   text-align: center;
   background: url(../img/walkway.jpg) repeat-y center center;
   background-size: cover;
-  -webkit-mask-image: -webkit-gradient(linear, left top, right top, from(black), color-stop(0.5, black), to(transparent)); }
+  -webkit-mask-image: -webkit-gradient(linear, left top, right top, from(black), color-stop(0.4, black), to(transparent)); }
   .landing h3 {
     color: rgba(255, 255, 255, 0.5);
     font-family: 'Titillium Web', sans-serif;
@@ -47,7 +47,7 @@ nav .nav a {
     list-style-type: none; }
   .messages .alert {
     background-color: #FEEFB3;
-    margin: 0 5% 0 80%; }
+    margin: -30px 5% 0 70%; }
 
 .errorlist {
   list-style-type: none;
@@ -87,23 +87,33 @@ div.hidden {
   text-align: right;
   border-top: none; }
 
+.budget {
+  margin-bottom: 2em;
+  font-family: 'Handlee', cursive; }
+
 .budgets {
-  background-color: lightgrey;
-  border-radius: 15px;
-  text-align: center;
-  margin-bottom: 1em; }
+  background-color: rgba(255, 255, 255, 0.5);
+  text-align: center; }
   .budgets .budget-info {
-    background-color: darkgrey; }
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 5px 0 5px 0;
+    border-bottom: 2px dotted darkgrey; }
   .budgets h3 {
-    text-align: left; }
+    margin-top: 3%;
+    font-size: 1.3em; }
   .budgets .exspense {
-    border-radius: 10px;
-    text-align: center; }
+    padding: 0.5em;
+    font-size: 1.2em; }
     .budgets .exspense .item {
-      background-color: lightblue; }
+      text-align: left; }
+    .budgets .exspense .date {
+      text-align: left;
+      font-size: 0.7em; }
     .budgets .exspense .location {
-      background-color: lightyellow; }
+      text-align: right;
+      font-size: 0.7em;
+      text-transform: uppercase; }
     .budgets .exspense .price {
-      background-color: rgba(255, 255, 255, 0.5); }
+      text-align: right; }
 
 /*# sourceMappingURL=xspense.css.map */

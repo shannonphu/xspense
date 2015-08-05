@@ -5,7 +5,8 @@ $warning-color: #FEEFB3;
 
 body {
 	margin-top: 100px;
-	background-color: #F2E9E4;
+	//background-color: #5CA4A9;
+	background: url(../img/stardust.png);
 }
 
 html, body {
@@ -16,7 +17,7 @@ h1 {
 	font-family: 'Righteous', cursive;
 }
 
-h2, h5 {
+h2, h3, h5 {
 	font-family: 'Handlee', cursive;
 }
 
@@ -37,7 +38,7 @@ p {
   text-align: center;
   background: url(../img/walkway.jpg) repeat-y center center;
   background-size: cover;
-  -webkit-mask-image: -webkit-gradient(linear, left top, right top, from(rgba(0,0,0,1)), color-stop(0.5, rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+  -webkit-mask-image: -webkit-gradient(linear, left top, right top, from(rgba(0,0,0,1)), color-stop(0.4, rgba(0,0,0,1)), to(rgba(0,0,0,0)));
 
   h3 {
 	color: $white-opacity;
@@ -70,7 +71,7 @@ nav {
 	}
 	.alert {
 		background-color: $warning-color;
-		margin: 0 5% 0 80%;
+		margin: -30px 5% 0 70%;
 	}
 }
 
@@ -125,36 +126,41 @@ div.hidden {
 
 // BUDGET POST CSS
 .budget {
-	//background-color: lightgrey;
+	margin-bottom: 2em;
+	font-family: 'Handlee', cursive;
 }
 
-
 .budgets {
-	background-color: lightgrey;
-	border-radius: 15px;
+	background-color: $white-opacity;
+	//border-radius: 15px;
 	text-align: center;
-	margin-bottom: 1em;
+	
 	.budget-info {
-		background-color: darkgrey;
+		background-color: rgba(255,255,255,0.3);
+		padding: 5px 0 5px 0;
+		border-bottom: 2px dotted darkgrey;
 	}
-	.expense-info {
-		//padding: 10px;
-	}
-
 	h3 {
-		text-align: left;
+		margin-top: 3%;
+		font-size: 1.3em;
 	}
 	.exspense {
-		border-radius: 10px;
-		text-align: center;
+		padding: 0.5em;
+		font-size: 1.2em;
 		.item {
-			background-color: lightblue;
+			text-align: left;
+		}
+		.date {
+			text-align: left;
+			font-size: 0.7em;
 		}
 		.location {
-			background-color: lightyellow;
+			text-align: right;
+			font-size: 0.7em;
+			text-transform: uppercase;
 		}
 		.price {
-			background-color: $white-opacity;
+			text-align: right;
 		}
 	}
 }

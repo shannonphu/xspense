@@ -21,25 +21,39 @@
 		{% for budget in budgets %}
 			<div class="medium-6 large-3 columns budget">
 				<div class="budgets">
-				<div class="budget-info">
-					<h2 class="purpose">{{ budget.purpose|title }}</h2>
-					<h5 class="amount">Budget Amount: ${{ budget.amount }}</h5>
+					<div class="budget-info">
+						<h2 class="purpose">{{ budget.purpose|title }}</h2>
+						<h5 class="amount">Budget Amount: ${{ budget.amount }}</h5>
+					</div>
+					<div id="expense-info">
+					<h3>Expenses:</h3>
+					{% if budget.expense_set.all %}
+						{% for expense in budget.expense_set.all %}
+							<div class="exspense row">
+								<div class="small-6 columns">
+									<div class="item">{{ expense.item|title }}</div>
+									<div class="date">{{ expense.date|date:"m/d/ Y" }}</div>
+								</div>
+								<div class="small-6 columns">
+									<div class="price">${{ expense.price }}</div>
+									<div class="location">{{ expense.location|title }}</div>
+								</div>
+							</div>
+						{% endfor %}
+					{% else %}
+						No expenses made yet in "{{ budget.purpose }}"!
+					{% endif %}
+					</div>
 				</div>
-				<div class="expense-info">
-					<h3>Expenses</h3>
-					{% for expense in budget.expense_set.all %}
-						<div class="exspense">
-							<div class="item">{{ expense.item|title }}</div>
-							<div class="location">{{ expense.location|title }}</div>
-							<div class="price">${{ expense.price }}</div>
-						</div>
-					{% endfor %}
-				</div>
-				</div>
-				</div>
+			</div>
 		{% endfor %}
 		</div>
 	{% else %}
+		<!-- CHANGE BACKGROUND COLOR -->
+		<style type="text/css"> 
+		body { background: none; background-color: #F2E9E4;} 
+		</style>
+
 		<!-- SHOW FLASHES -->
 		{% if messages %}
 		<ul class="messages">

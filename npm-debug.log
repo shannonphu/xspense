@@ -1,0 +1,351 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '-g', 'browser-sync' ]
+2 info using npm@2.11.3
+3 info using node@v0.12.7
+4 verbose install initial load of /usr/local/lib/package.json
+5 verbose readDependencies loading dependencies from /usr/local/lib/package.json
+6 silly cache add args [ 'browser-sync', null ]
+7 verbose cache add spec browser-sync
+8 silly cache add parsed spec { raw: 'browser-sync',
+8 silly cache add   scope: null,
+8 silly cache add   name: 'browser-sync',
+8 silly cache add   rawSpec: '',
+8 silly cache add   spec: '*',
+8 silly cache add   type: 'range' }
+9 silly addNamed browser-sync@*
+10 verbose addNamed "*" is a valid semver range for browser-sync
+11 silly addNameRange { name: 'browser-sync', range: '*', hasData: false }
+12 silly mapToRegistry name browser-sync
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry uri https://registry.npmjs.org/browser-sync
+16 verbose addNameRange registry:https://registry.npmjs.org/browser-sync not in flight; fetching
+17 verbose request uri https://registry.npmjs.org/browser-sync
+18 verbose request no auth needed
+19 info attempt registry request try #1 at 1:35:06 PM
+20 verbose request id a2bde16c162f344c
+21 verbose etag "6K0IPDDGLOUT4R7LZ02PDKEBD"
+22 http request GET https://registry.npmjs.org/browser-sync
+23 http 304 https://registry.npmjs.org/browser-sync
+24 silly get cb [ 304,
+24 silly get   { date: 'Wed, 05 Aug 2015 20:35:06 GMT',
+24 silly get     via: '1.1 varnish',
+24 silly get     'cache-control': 'max-age=60',
+24 silly get     etag: '"6K0IPDDGLOUT4R7LZ02PDKEBD"',
+24 silly get     age: '0',
+24 silly get     connection: 'keep-alive',
+24 silly get     'x-served-by': 'cache-sjc3133-SJC',
+24 silly get     'x-cache': 'HIT',
+24 silly get     'x-cache-hits': '1',
+24 silly get     'x-timer': 'S1438806906.731874,VS0,VE97',
+24 silly get     vary: 'Accept' } ]
+25 verbose etag https://registry.npmjs.org/browser-sync from cache
+26 verbose get saving browser-sync to /Users/shannon/.npm/registry.npmjs.org/browser-sync/.cache.json
+27 silly addNameRange number 2 { name: 'browser-sync', range: '*', hasData: true }
+28 silly addNameRange versions [ 'browser-sync',
+28 silly addNameRange   [ '0.1.0',
+28 silly addNameRange     '0.1.1',
+28 silly addNameRange     '0.1.3',
+28 silly addNameRange     '0.1.5',
+28 silly addNameRange     '0.1.6',
+28 silly addNameRange     '0.1.7',
+28 silly addNameRange     '0.1.8',
+28 silly addNameRange     '0.1.9',
+28 silly addNameRange     '0.1.10',
+28 silly addNameRange     '0.2.0',
+28 silly addNameRange     '0.2.1',
+28 silly addNameRange     '0.3.0',
+28 silly addNameRange     '0.3.1',
+28 silly addNameRange     '0.3.2',
+28 silly addNameRange     '0.3.3',
+28 silly addNameRange     '0.3.4',
+28 silly addNameRange     '0.3.5',
+28 silly addNameRange     '0.3.6',
+28 silly addNameRange     '0.3.7',
+28 silly addNameRange     '0.3.8',
+28 silly addNameRange     '0.3.10',
+28 silly addNameRange     '0.4.0',
+28 silly addNameRange     '0.4.1',
+28 silly addNameRange     '0.4.2',
+28 silly addNameRange     '0.4.21',
+28 silly addNameRange     '0.4.3',
+28 silly addNameRange     '0.4.4',
+28 silly addNameRange     '0.4.5',
+28 silly addNameRange     '0.4.6',
+28 silly addNameRange     '0.4.7',
+28 silly addNameRange     '0.4.8',
+28 silly addNameRange     '0.4.9',
+28 silly addNameRange     '0.4.10',
+28 silly addNameRange     '0.4.11',
+28 silly addNameRange     '0.4.12',
+28 silly addNameRange     '0.5.0',
+28 silly addNameRange     '0.5.1',
+28 silly addNameRange     '0.5.2',
+28 silly addNameRange     '0.5.3',
+28 silly addNameRange     '0.5.4',
+28 silly addNameRange     '0.5.5',
+28 silly addNameRange     '0.5.6',
+28 silly addNameRange     '0.5.7',
+28 silly addNameRange     '0.5.8',
+28 silly addNameRange     '0.5.9',
+28 silly addNameRange     '0.6.0',
+28 silly addNameRange     '0.6.1',
+28 silly addNameRange     '0.6.2',
+28 silly addNameRange     '0.7.0',
+28 silly addNameRange     '0.7.1',
+28 silly addNameRange     '0.7.2',
+28 silly addNameRange     '0.7.3',
+28 silly addNameRange     '0.7.4',
+28 silly addNameRange     '0.7.5',
+28 silly addNameRange     '0.7.7',
+28 silly addNameRange     '0.8.0',
+28 silly addNameRange     '0.8.1',
+28 silly addNameRange     '0.8.2',
+28 silly addNameRange     '0.9.0',
+28 silly addNameRange     '0.9.1',
+28 silly addNameRange     '1.0.0',
+28 silly addNameRange     '1.1.0',
+28 silly addNameRange     '1.1.1',
+28 silly addNameRange     '1.1.2',
+28 silly addNameRange     '1.2.0',
+28 silly addNameRange     '1.2.1',
+28 silly addNameRange     '1.3.0',
+28 silly addNameRange     '1.3.2',
+28 silly addNameRange     '1.3.3',
+28 silly addNameRange     '1.3.4',
+28 silly addNameRange     '1.3.5',
+28 silly addNameRange     '1.3.6',
+28 silly addNameRange     '1.3.7',
+28 silly addNameRange     '1.5.0',
+28 silly addNameRange     '1.5.1',
+28 silly addNameRange     '1.5.2',
+28 silly addNameRange     '1.5.3',
+28 silly addNameRange     '1.5.4',
+28 silly addNameRange     '1.5.5',
+28 silly addNameRange     '1.5.6',
+28 silly addNameRange     '1.5.7',
+28 silly addNameRange     '1.5.8',
+28 silly addNameRange     '1.5.9',
+28 silly addNameRange     '1.6.0',
+28 silly addNameRange     '1.6.1',
+28 silly addNameRange     '1.6.2',
+28 silly addNameRange     '1.6.3',
+28 silly addNameRange     '1.6.4',
+28 silly addNameRange     '1.6.5',
+28 silly addNameRange     '1.7.0',
+28 silly addNameRange     '1.7.1',
+28 silly addNameRange     '1.7.2',
+28 silly addNameRange     '1.7.3',
+28 silly addNameRange     '1.8.0',
+28 silly addNameRange     '1.8.1',
+28 silly addNameRange     '1.8.2',
+28 silly addNameRange     '1.8.3',
+28 silly addNameRange     '1.9.0',
+28 silly addNameRange     '1.9.1',
+28 silly addNameRange     '2.0.0-rc1',
+28 silly addNameRange     '2.0.0-rc2',
+28 silly addNameRange     '2.0.0-rc3',
+28 silly addNameRange     '2.0.0-rc4',
+28 silly addNameRange     '2.0.0-rc5',
+28 silly addNameRange     '2.0.0-rc6',
+28 silly addNameRange     '2.0.0-rc7',
+28 silly addNameRange     '2.0.0-rc8',
+28 silly addNameRange     '2.0.0-rc9',
+28 silly addNameRange     '2.0.0-rc10',
+28 silly addNameRange     '2.0.0',
+28 silly addNameRange     '2.0.1',
+28 silly addNameRange     '2.1.0',
+28 silly addNameRange     '2.1.1',
+28 silly addNameRange     '2.1.2',
+28 silly addNameRange     '2.1.3',
+28 silly addNameRange     '2.1.4',
+28 silly addNameRange     '2.1.6',
+28 silly addNameRange     '2.2.0',
+28 silly addNameRange     '2.2.1',
+28 silly addNameRange     '2.2.2',
+28 silly addNameRange     '2.2.3',
+28 silly addNameRange     '2.2.4',
+28 silly addNameRange     '2.2.5',
+28 silly addNameRange     '2.3.0',
+28 silly addNameRange     '2.3.1',
+28 silly addNameRange     '2.3.2',
+28 silly addNameRange     '2.4.0',
+28 silly addNameRange     '2.4.1',
+28 silly addNameRange     '2.5.0',
+28 silly addNameRange     '2.5.1',
+28 silly addNameRange     '2.5.2',
+28 silly addNameRange     '2.5.3',
+28 silly addNameRange     '2.6.0',
+28 silly addNameRange     '2.6.1',
+28 silly addNameRange     '2.6.2',
+28 silly addNameRange     '2.6.3',
+28 silly addNameRange     '2.6.4',
+28 silly addNameRange     '2.6.5',
+28 silly addNameRange     '2.6.6',
+28 silly addNameRange     '1.9.2',
+28 silly addNameRange     '2.6.7',
+28 silly addNameRange     '2.6.8',
+28 silly addNameRange     '2.6.9',
+28 silly addNameRange     '2.6.10',
+28 silly addNameRange     '2.6.11',
+28 silly addNameRange     '2.7.0',
+28 silly addNameRange     '2.7.1',
+28 silly addNameRange     '2.7.2',
+28 silly addNameRange     '2.7.3',
+28 silly addNameRange     '2.7.4',
+28 silly addNameRange     '2.7.5',
+28 silly addNameRange     '2.7.6',
+28 silly addNameRange     '2.7.7',
+28 silly addNameRange     '2.7.8',
+28 silly addNameRange     '2.7.9',
+28 silly addNameRange     '2.7.10',
+28 silly addNameRange     '2.7.11',
+28 silly addNameRange     '2.7.12',
+28 silly addNameRange     '2.7.13',
+28 silly addNameRange     '2.8.0',
+28 silly addNameRange     '2.8.1',
+28 silly addNameRange     '2.8.2' ] ]
+29 silly addNamed browser-sync@2.8.2
+30 verbose addNamed "2.8.2" is a plain semver version for browser-sync
+31 silly cache afterAdd browser-sync@2.8.2
+32 verbose afterAdd /Users/shannon/.npm/browser-sync/2.8.2/package/package.json not in flight; writing
+33 verbose afterAdd /Users/shannon/.npm/browser-sync/2.8.2/package/package.json written
+34 silly install resolved [ { name: 'browser-sync',
+34 silly install resolved     description: 'Live CSS Reload & Browser Syncing',
+34 silly install resolved     version: '2.8.2',
+34 silly install resolved     homepage: 'http://www.browsersync.io/',
+34 silly install resolved     author: { name: 'Shane Osbourne' },
+34 silly install resolved     repository:
+34 silly install resolved      { type: 'git',
+34 silly install resolved        url: 'git+https://github.com/browsersync/browser-sync.git' },
+34 silly install resolved     license: 'Apache-2.0',
+34 silly install resolved     bin: { 'browser-sync': 'bin/browser-sync.js' },
+34 silly install resolved     files: [ 'bin', 'index.js', 'lib' ],
+34 silly install resolved     engines: { node: '>= 0.8.0' },
+34 silly install resolved     scripts:
+34 silly install resolved      { env: 'node ./test/env.js',
+34 silly install resolved        test: 'npm run lint && npm run env && npm run unit',
+34 silly install resolved        lint: 'gulp lint',
+34 silly install resolved        pro: 'protractor test/protractor/config.single.js',
+34 silly install resolved        'pro-local': 'node test/protractor/setup.js',
+34 silly install resolved        unit: 'mocha --recursive test/specs --timeout 10000',
+34 silly install resolved        cover: 'npm run env && npm run cover-local && npm run coveralls',
+34 silly install resolved        'cover-local': 'istanbul cover _mocha -- --timeout 10000 --recursive ./test/specs',
+34 silly install resolved        coveralls: 'istanbul-coveralls',
+34 silly install resolved        'pre-release': 'npm test && npm run pro-local && npm run pro' },
+34 silly install resolved     dependencies:
+34 silly install resolved      { anymatch: '^1.3.0',
+34 silly install resolved        'async-each-series': '^0.1.1',
+34 silly install resolved        'browser-sync-client': '^2.2.1',
+34 silly install resolved        'browser-sync-ui': '^0.5.13',
+34 silly install resolved        chokidar: '^1.0.5',
+34 silly install resolved        connect: '^3.4.0',
+34 silly install resolved        'dev-ip': '^1.0.1',
+34 silly install resolved        'easy-extender': '^2.3.1',
+34 silly install resolved        'eazy-logger': '^2.1.2',
+34 silly install resolved        'emitter-steward': '^0.0.1',
+34 silly install resolved        foxy: '^11.1.1',
+34 silly install resolved        immutable: '^3.7.4',
+34 silly install resolved        localtunnel: '^1.7.0',
+34 silly install resolved        lodash: '^3.9.3',
+34 silly install resolved        longest: '^1.0.1',
+34 silly install resolved        meow: '^3.3.0',
+34 silly install resolved        opn: '^2.0.1',
+34 silly install resolved        'pad-left': '^1.0.2',
+34 silly install resolved        portscanner: '^1.0.0',
+34 silly install resolved        'query-string': '^2.4.0',
+34 silly install resolved        'resp-modifier': '^4.0.4',
+34 silly install resolved        'serve-index': '^1.7.0',
+34 silly install resolved        'serve-static': '^1.10.0',
+34 silly install resolved        'socket.io': '^1.3.6',
+34 silly install resolved        'ua-parser-js': '^0.7.9',
+34 silly install resolved        ucfirst: '0.0.1' },
+34 silly install resolved     devDependencies:
+34 silly install resolved      { 'browser-sync-spa': '^1.0.2',
+34 silly install resolved        'bs-snippet-injector': '^2.0.1',
+34 silly install resolved        chai: '^3.2.0',
+34 silly install resolved        chalk: '^1.1.0',
+34 silly install resolved        'graceful-fs': '^3.0.8',
+34 silly install resolved        gulp: '^3.9.0',
+34 silly install resolved        'gulp-contribs': '0.0.3',
+34 silly install resolved        'gulp-conventional-changelog': '^0.4.0',
+34 silly install resolved        'gulp-filter': '^2.0.2',
+34 silly install resolved        'gulp-jscs': '^1.6.0',
+34 silly install resolved        'gulp-jshint': '^1.11.2',
+34 silly install resolved        'gulp-ruby-sass': '^1.0.5',
+34 silly install resolved        'gulp-yuidoc': '^0.1.2',
+34 silly install resolved        istanbul: '^0.3.17',
+34 silly install resolved        'istanbul-coveralls': '^1.0.3',
+34 silly install resolved        mocha: '^2.2.5',
+34 silly install resolved        q: '^1.4.1',
+34 silly install resolved        request: '^2.60.0',
+34 silly install resolved        sinon: '^1.15.4',
+34 silly install resolved        slugify: '^0.1.1',
+34 silly install resolved        'socket.io-client': '^1.3.6',
+34 silly install resolved        supertest: '^1.0.1',
+34 silly install resolved        vinyl: '^0.5.0' },
+34 silly install resolved     keywords: [ 'browser sync', 'css', 'live reload', 'sync' ],
+34 silly install resolved     gitHead: 'd3b4601ff2b02fcff42396deceada43351d713d9',
+34 silly install resolved     bugs: { url: 'https://github.com/browsersync/browser-sync/issues' },
+34 silly install resolved     _id: 'browser-sync@2.8.2',
+34 silly install resolved     _shasum: 'd062ca0c88126337302a192236ee2c93d258f075',
+34 silly install resolved     _from: 'browser-sync@*',
+34 silly install resolved     _npmVersion: '2.11.3',
+34 silly install resolved     _nodeVersion: '0.12.2',
+34 silly install resolved     _npmUser: { name: 'shakyshane', email: 'shakyshane@gmail.com' },
+34 silly install resolved     dist:
+34 silly install resolved      { shasum: 'd062ca0c88126337302a192236ee2c93d258f075',
+34 silly install resolved        tarball: 'http://registry.npmjs.org/browser-sync/-/browser-sync-2.8.2.tgz' },
+34 silly install resolved     maintainers: [ [Object] ],
+34 silly install resolved     directories: {},
+34 silly install resolved     _resolved: 'https://registry.npmjs.org/browser-sync/-/browser-sync-2.8.2.tgz',
+34 silly install resolved     readme: 'ERROR: No README data found!' } ]
+35 info install browser-sync@2.8.2 into /usr/local/lib
+36 info installOne browser-sync@2.8.2
+37 verbose installOne of browser-sync to /usr/local/lib not in flight; installing
+38 verbose lock using /Users/shannon/.npm/_locks/browser-sync-ed941186c435fb34.lock for /usr/local/lib/node_modules/browser-sync
+39 silly install write writing browser-sync 2.8.2 to /usr/local/lib/node_modules/browser-sync
+40 verbose unbuild lib/node_modules/browser-sync
+41 silly gentlyRm /usr/local/lib/node_modules/browser-sync is being purged from base /usr/local
+42 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/browser-sync
+43 verbose tar unpack /Users/shannon/.npm/browser-sync/2.8.2/package.tgz
+44 verbose tar unpacking to /usr/local/lib/node_modules/browser-sync
+45 silly gentlyRm /usr/local/lib/node_modules/browser-sync is being purged
+46 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/browser-sync
+47 silly gunzTarPerm modes [ '755', '644' ]
+48 error tar.unpack untar error /Users/shannon/.npm/browser-sync/2.8.2/package.tgz
+49 verbose unlock done using /Users/shannon/.npm/_locks/browser-sync-ed941186c435fb34.lock for /usr/local/lib/node_modules/browser-sync
+50 verbose fstream_path /usr/local/lib/node_modules/browser-sync
+51 verbose fstream_type Directory
+52 verbose fstream_class DirWriter
+53 verbose stack Error: EACCES, mkdir '/usr/local/lib/node_modules/browser-sync'
+53 verbose stack     at Error (native)
+54 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25
+54 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53
+54 verbose fstream_stack FSReqWrap.oncomplete (fs.js:95:15)
+55 verbose cwd /Users/shannon/Desktop/Django/xspense
+56 error Darwin 14.3.0
+57 error argv "node" "/usr/local/bin/npm" "install" "-g" "browser-sync"
+58 error node v0.12.7
+59 error npm  v2.11.3
+60 error path /usr/local/lib/node_modules/browser-sync
+61 error code EACCES
+62 error errno -13
+63 error Error: EACCES, mkdir '/usr/local/lib/node_modules/browser-sync'
+63 error     at Error (native)
+63 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/browser-sync']
+63 error   errno: -13,
+63 error   code: 'EACCES',
+63 error   path: '/usr/local/lib/node_modules/browser-sync',
+63 error   fstream_type: 'Directory',
+63 error   fstream_path: '/usr/local/lib/node_modules/browser-sync',
+63 error   fstream_class: 'DirWriter',
+63 error   fstream_stack:
+63 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25',
+63 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53',
+63 error      'FSReqWrap.oncomplete (fs.js:95:15)' ] }
+64 error Please try running this command again as root/Administrator.
+65 verbose exit [ -13, true ]
+66 verbose unbuild lib/node_modules/browser-sync
+67 silly gentlyRm /usr/local/lib/node_modules/browser-sync is being purged from base /usr/local
+68 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/browser-sync

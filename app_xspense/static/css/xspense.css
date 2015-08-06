@@ -126,10 +126,21 @@ div.hidden {
   padding: 1em; }
   .solo-page section {
     text-align: center; }
+  .solo-page p {
+    font-size: 1.1em; }
   .solo-page .glyphicon {
     font-size: 3.5em;
     line-height: 1.2em;
     padding-left: 0; }
+  .solo-page .expense-icon {
+    font-size: 1.3em;
+    text-align: center; }
+  .solo-page #piggy-bank {
+    color: palevioletred; }
+  .solo-page #map-marker {
+    color: firebrick; }
+  .solo-page #calendar {
+    color: dimgray; }
   .solo-page #warning-icon {
     font-size: 1.2em;
     color: maroon;

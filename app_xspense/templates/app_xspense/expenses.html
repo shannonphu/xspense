@@ -4,14 +4,10 @@
 	<h1 class="head-title">Expenses</h1>
 	{% for expense in expenses %}
 		<div class="solo-page container" style="width: 90%">
-			<section class="small-6 columns">
-				{{ expense.item }}
-				In Budget: {{ expense.budget }}
-				<div class="small-12 medium-9 columns">
-					<h3 class="title">${{ expense.price }} | {{ expense.location }}</h3>
-					<p>Date Spent: {{ expense|date:"m/d/Y" }}</p>
-				</div>
-			</section>
+				<h3 class="title">{{ expense.item }} | <font style="color:mediumseagreen;">${{ expense.price }}</font> </h3>
+				<p><span class="glyphicon glyphicon-piggy-bank small-1 column expense-icon" id="piggy-bank" aria-hidden="true"></span> In Budget: {{ expense.budget }}</p>
+				<p><span class="glyphicon glyphicon-map-marker small-1 column expense-icon" id="map-marker" aria-hidden="true"></span> Location: {{ expense.location }}</p>
+				<p><span class="glyphicon glyphicon-calendar small-1 column expense-icon" id="calendar" aria-hidden="true"></span> Date Spent: {{ expense|date:"m/d/Y" }}</p>
 		</div>
 	{% endfor %}
 {% endblock %}

@@ -10,7 +10,7 @@ from .models import Expense, Budget
 # show all budgets/expenses
 @login_required
 def all_expenses(request):
-	expenses = Expense.objects.filter(user=request.user)
+	expenses = Expense.objects.filter(user=request.user).order_by('-date')
 	return render(request, 'app_xspense/expenses.html', {'expenses': expenses})
 
 def overview(request):
@@ -19,7 +19,7 @@ def overview(request):
 
 @login_required
 def all_budgets(request):
-	budgets = Budget.objects.filter(user=request.user).order_by('category')
+	budgets = Budget.objects.filter(user=request.user).order_by('category').order_by('-date_created')
 	return render(request, 'app_xspense/budgets.html', {'budgets': budgets})
 
 # Load forms

@@ -169,7 +169,7 @@ div.hidden {
 	}
 }
 
-// BUDGET PAGE CSS
+// BUDGET EXPENSE PAGE CSS
 .solo-page {
 	background-color: $white-opacity;
 	margin-bottom: 2em;
@@ -177,11 +177,21 @@ div.hidden {
 	section {
 		text-align: center;
 	}
+	p {
+		font-size: 1.1em;
+	}
 	.glyphicon {
     	font-size: 3.5em;
     	line-height: 1.2em;
     	padding-left: 0;
 	}
+	.expense-icon {
+		font-size: 1.3em;
+		text-align: center;
+	}
+	#piggy-bank { color: palevioletred; }
+	#map-marker { color: firebrick; }
+	#calendar { color: dimgray; }
 	#warning-icon {
 		font-size: 1.2em;
 		color: maroon;

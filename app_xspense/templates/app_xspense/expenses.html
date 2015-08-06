@@ -9,7 +9,9 @@
 				<h3 class="title">{{ expense.item | title }} | <font style="color:grey;">${{ expense.price }}</font> </h3>
 				<p>
 					<span class="glyphicon glyphicon-piggy-bank small-1 column expense-icon" id="piggy-bank" aria-hidden="true"></span> 
-					Budget: {{ expense.budget.purpose | title }} | {{ expense.budget.category | categoryString }} | Amount Allowed: ${{ expense.budget.amount }}
+					Budget: {{ expense.budget.purpose | title }} 
+					<br>
+					{{ expense.budget.category | categoryString }} | Amount Allowed: ${{ expense.budget.amount }}
 				</p>
 				<p>
 					<span class="glyphicon glyphicon-map-marker small-1 column expense-icon" id="map-marker" aria-hidden="true"></span> Location: {{ expense.location | title }}

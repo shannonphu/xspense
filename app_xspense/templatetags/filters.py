@@ -50,3 +50,17 @@ def icon(category):
     }.get(category, 13)
     return '<span class="glyphicon glyphicon-' + icon + ' small-12 medium-1 columns" aria-hidden="true"></span>'
 
+@register.filter(name="progress")
+def progress(budget):
+    totalExpense = sumExpenses(budget.expense_set.all())
+    percentage = int((totalExpense / budget.amount) * 100)
+    if percentage >= 100:
+        return '<div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%; min-width: 2em">100%</div>'
+    else:
+        percentage = str(percentage)
+        return '<div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="' + percentage + '" aria-valuemin="0" aria-valuemax="100" style="width: ' + percentage + '%; min-width: 2em">' + percentage + '%</div>'
+
+
+
+
+

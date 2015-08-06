@@ -55,10 +55,13 @@ def progress(budget):
     totalExpense = sumExpenses(budget.expense_set.all())
     percentage = int((totalExpense / budget.amount) * 100)
     if percentage >= 100:
-        return '<div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%; min-width: 2em">100%</div>'
+        overshot = str(totalExpense - budget.amount)
+        barHTML = '<div class="progress"><div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%; min-width: 2em">100%</div></div>'
+        warningHTML = '<div class="warning"><span class="glyphicon glyphicon-alert" id="warning-icon" aria-hidden="true"></span> Overshot budget by $'+overshot+'!</div>'
+        return barHTML + warningHTML
     else:
         percentage = str(percentage)
-        return '<div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="' + percentage + '" aria-valuemin="0" aria-valuemax="100" style="width: ' + percentage + '%; min-width: 2em">' + percentage + '%</div>'
+        return '<div class="progress"><div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="' + percentage + '" aria-valuemin="0" aria-valuemax="100" style="width: ' + percentage + '%; min-width: 2em">' + percentage + '%</div></div>'
 
 
 

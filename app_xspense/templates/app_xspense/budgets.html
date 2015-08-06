@@ -19,9 +19,9 @@
 					<p class="small-12 medium-6 columns">Budget Amount: ${{ budget.amount }}</p>
 					<p class="small-12 medium-6 columns">Amount Spent: ${{ budget.expense_set.all | sumExpenses}}</p>
 				</div>
-				<div class="progress">
+				
 				  {{ budget | progress | safe }}
-				</div>
+				
 			</section>
 		</div>
 	{% endfor %}

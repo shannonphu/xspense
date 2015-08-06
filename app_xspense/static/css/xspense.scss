@@ -182,9 +182,14 @@ div.hidden {
     	line-height: 1.2em;
     	padding-left: 0;
 	}
-	.progress-bar {
-		//width: 100%;
-		//height: 100%;
+	#warning-icon {
+		font-size: 1.2em;
+		color: maroon;
+		text-align: right;
+	}
+	.warning {
+		font-family: 'Titillium Web', sans-serif;
+		font-weight: bold;
 	}
 }
 

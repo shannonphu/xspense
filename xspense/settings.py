@@ -37,7 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app_xspense'
+    'app_xspense',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -82,6 +82,9 @@ DATABASES = {
     }
 }
 
+FIXTURE_DIRS = (
+    os.path.join(BASE_DIR, 'xspense/fixtures'),
+)
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/

@@ -1,13 +1,18 @@
 {% extends "app_xspense/base.html" %}
+{% load filters %}
 
 {% block content %}
 	<h1 class="head-title">Expenses</h1>
 	{% for expense in expenses %}
 		<div class="solo-page container" style="width: 90%">
-				<h3 class="title">{{ expense.item }} | <font style="color:mediumseagreen;">${{ expense.price }}</font> </h3>
-				<p><span class="glyphicon glyphicon-piggy-bank small-1 column expense-icon" id="piggy-bank" aria-hidden="true"></span> In Budget: {{ expense.budget }}</p>
-				<p><span class="glyphicon glyphicon-map-marker small-1 column expense-icon" id="map-marker" aria-hidden="true"></span> Location: {{ expense.location }}</p>
-				<p><span class="glyphicon glyphicon-calendar small-1 column expense-icon" id="calendar" aria-hidden="true"></span> Date Spent: {{ expense|date:"m/d/Y" }}</p>
+			<div class="small-12 medium-6 columns" id="expense-overview">
+				<h3 class="title">{{ expense.item | title }} | <font style="color:grey;">${{ expense.price }}</font> </h3>
+				<p><span class="glyphicon glyphicon-piggy-bank small-1 column expense-icon" id="piggy-bank" aria-hidden="true"></span> Budget: {{ expense.budget.purpose | title }} | {{ expense.budget.category | categoryString }} | Amount Allowed: ${{ expense.budget.amount }}</p>
+				<p><span class="glyphicon glyphicon-map-marker small-1 column expense-icon" id="map-marker" aria-hidden="true"></span> Location: {{ expense.location | title }}</p>
+				<p><span class="glyphicon glyphicon-calendar small-1 column expense-icon" id="calendar" aria-hidden="true"></span> Date Spent: {{ expense.date|date:"m/d/Y" }}</p>
+			</div>
+			<div class="small-12 medium-6 columns">
+			</div>
 		</div>
 	{% endfor %}
 {% endblock %}

@@ -180,6 +180,9 @@ div.hidden {
 	p {
 		font-size: 1.1em;
 	}
+	#expense-overview {
+		border-right: 1px solid darkgrey;
+	}
 	.glyphicon {
     	font-size: 3.5em;
     	line-height: 1.2em;
@@ -210,6 +213,18 @@ div.hidden {
 }
 
 
+// NAV BAR SCROLL COLOR CHANGE
+.navbar {
+    -webkit-transition: all 0.6s ease-out;
+    -moz-transition: all 0.6s ease-out;
+    -o-transition: all 0.6s ease-out;
+    -ms-transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;
+}
+
+.navbar.scrolled {
+    background: rgba(255, 255, 255, 0.78); //NON-IE
+}
 
 
 

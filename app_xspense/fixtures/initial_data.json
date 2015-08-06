@@ -1,0 +1,90 @@
+[  
+   {  
+      "fields":{  
+         "user":9,
+         "category":4,
+         "date_created":"2015-08-03T03:51:22Z",
+         "amount":"1000.00",
+         "purpose":"christmas shopping for the family"
+      },
+      "model":"app_xspense.budget",
+      "pk":9
+   },
+   {  
+      "fields":{  
+         "user":9,
+         "category":11,
+         "date_created":"2015-08-03T03:55:33Z",
+         "amount":"30000.00",
+         "purpose":"car purchase"
+      },
+      "model":"app_xspense.budget",
+      "pk":9
+   },
+   {  
+      "fields":{  
+         "user":9,
+         "category":13,
+         "date_created":"2015-07-03T03:51:22Z",
+         "amount":"10000.00",
+         "purpose":"wedding"
+      },
+      "model":"app_xspense.budget",
+      "pk":9
+   },
+   {  
+      "fields":{  
+         "user":9,
+         "category":13,
+         "date_created":"2015-06-01T03:51:22Z",
+         "amount":"1000.00",
+         "purpose":"vacation to NY"
+      },
+      "model":"app_xspense.budget",
+      "pk":9
+   },
+   {  
+      "fields":{  
+         "user":null,
+         "category":6,
+         "date_created":"2015-07-04T03:51:22Z",
+         "amount":"250.00",
+         "purpose":"4th of July party"
+      },
+      "model":"app_xspense.budget",
+      "pk":9
+   },
+   {  
+      "fields":{  
+         "user":null,
+         "category":1,
+         "date_created":"2015-07-24T03:51:22Z",
+         "amount":"300.00",
+         "purpose":"back to school dorm shopping"
+      },
+      "model":"app_xspense.budget",
+      "pk":9
+   },
+   {  
+      "fields":{  
+         "user":null,
+         "category":9,
+         "date_created":"2015-07-29T03:51:22Z",
+         "amount":"200.00",
+         "purpose":"make up shopping spree"
+      },
+      "model":"app_xspense.budget",
+      "pk":9
+   },
+   {  
+      "fields":{  
+         "user":null,
+         "category":14,
+         "date_created":"2015-09-15T03:51:22Z",
+         "amount":"500.00",
+         "purpose":"textbooks"
+      },
+      "model":"app_xspense.budget",
+      "pk":9
+   }
+]

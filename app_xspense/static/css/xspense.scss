@@ -1,6 +1,7 @@
 $nav-color: navy;
 $nav-button-color: lightgrey;
 $white-opacity: rgba(255,255,255,0.5);
+$more-white-opacity: rgba(255,255,255,0);
 $black-opacity: rgba(0,0,0,0.5);
 $warning-color: #FEEFB3;
 
@@ -184,6 +185,17 @@ div.hidden {
 	padding: 1em;
 	section {
 		text-align: center;
+		h5 {
+			padding: 2px;
+			font-family: 'Titillium Web', sans-serif;
+			//background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,0.65) 0%, rgba(255,255,255,0.6) 6%, rgba(255,255,255,0.14) 67%, rgba(255,255,255,0) 86%); /* FF3.6+ */
+			//background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,0.65)), color-stop(6%,rgba(255,255,255,0.6)), color-stop(67%,rgba(255,255,255,0.14)), color-stop(86%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+			//background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,0.65) 0%,rgba(255,255,255,0.6) 6%,rgba(255,255,255,0.14) 67%,rgba(255,255,255,0) 86%); /* Chrome10+,Safari5.1+ */
+			//background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,0.65) 0%,rgba(255,255,255,0.6) 6%,rgba(255,255,255,0.14) 67%,rgba(255,255,255,0) 86%); /* Opera 12+ */
+			//background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,0.65) 0%,rgba(255,255,255,0.6) 6%,rgba(255,255,255,0.14) 67%,rgba(255,255,255,0) 86%); /* IE10+ */
+			//background: radial-gradient(ellipse at center, rgba(255,255,255,0.65) 0%,rgba(255,255,255,0.6) 6%,rgba(255,255,255,0.14) 67%,rgba(255,255,255,0) 86%); /* W3C */
+			//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+		}
 	}
 	p {
 		font-size: 1.1em;

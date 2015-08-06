@@ -132,6 +132,9 @@ div.hidden {
   padding: 1em; }
   .solo-page section {
     text-align: center; }
+    .solo-page section h5 {
+      padding: 2px;
+      font-family: 'Titillium Web', sans-serif; }
   .solo-page p {
     font-size: 1.1em; }
   .solo-page #expense-overview {

@@ -2,21 +2,23 @@
 {% load filters %}
 
 {% block content %}
-	<h1 id="budgets-title">Budgets</h1>
+
+	<h1 class="head-title">Budgets</h1>
 	{% for budget in budgets %}
 		<div class="budget-page-budget container" style="width: 90%">
-			<h3>{{ budget.purpose|title }} | {{ budget.category|categoryString }}</h3>
-			<p>Budget Amount: ${{ budget.amount }}</p>
-			<p>Date Created: {{ budget.date_created|date:"m/d/Y" }}</p>
+			<section class="small-6 columns">
+				{{ budget.category|icon|safe }}
+				<div class="small-12 medium-9 columns">
+					<h3 class="title">{{ budget.purpose|title }} | {{ budget.category|categoryString }}</h3>
+					<p>Date Created: {{ budget.date_created|date:"m/d/Y" }}</p>
+				</div>
+			</section>
 
-			total: {{ budget.expense_set.all | sumExpenses}}
-
-
+			<section class="small-6 columns">
+				<p class="small-12 medium-6 columns">Budget Amount: ${{ budget.amount }}</p>
+				<p class="small-12 medium-6 columns">Amount Spent: ${{ budget.expense_set.all | sumExpenses}}</p>
+			</section>
 		</div>
 	{% endfor %}
-
-<script>
-	
-</script>
 
 {% endblock %}

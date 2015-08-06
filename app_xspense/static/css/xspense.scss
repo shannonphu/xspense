@@ -174,14 +174,22 @@ div.hidden {
 	background-color: $white-opacity;
 	margin-bottom: 2em;
 	padding: 1em;
+	section {
+		text-align: center;
+	}
+	.glyphicon {
+    	font-size: 3.5em;
+    	line-height: 1.2em;
+    	padding-left: 0;
+	}
 }
 
-#budgets-title {
+.head-title {
 	text-align: center;
 	padding: 0.5em;
-	color: $white-opacity;
-	-webkit-text-stroke: 2px $black-opacity;
+	text-shadow: 0 2px $white-opacity;
 }
+
 
 
 

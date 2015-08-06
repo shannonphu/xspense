@@ -17,6 +17,7 @@ class Budget(models.Model):
 	AUTO = 11
 	GIFTS = 12
 	OTHER = 13
+	EDUCATION = 14
 	category_choices = [
 		(ELECTRONICS, 'electronics'),
 		(OFFICE, 'office'),
@@ -31,7 +32,8 @@ class Budget(models.Model):
 		(SPORTS_FITNESS, 'sports/fitness'),
 		(AUTO, 'auto'),
 		(GIFTS, 'gifts'),
-		(OTHER, 'other')
+		(OTHER, 'other'),
+		(EDUCATION, 'education')
 		]
 	category = models.IntegerField(choices=category_choices, default=13)
 	user = models.ForeignKey('auth.User', null=True)

@@ -20,3 +20,10 @@ def categoryString(value):
         12: 'GIFTS',
         13: 'OTHER'
     }.get(value, 13)
+
+@register.filter(name='sumExpenses')
+def sumExpenses(expenses):
+	total = 0;
+	for expense in expenses:
+		total = total + expense.price
+	return total

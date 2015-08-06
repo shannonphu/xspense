@@ -3,7 +3,7 @@
 {% block content %}
 
 <form method="POST" class="post-form form container" style="width: 70%">
-	<h2>New Budget</h2>
+	<h1 class="head-title">New Budget</h1>
 	{% csrf_token %}
     {{ form.as_p }}
     <div class="form-group">

@@ -1,15 +1,17 @@
 {% extends "app_xspense/base.html" %}
 
 {% block content %}
-<div class="row">
-	<h1>Expenses</h1>
+	<h1 class="head-title">Expenses</h1>
 	{% for expense in expenses %}
-		<h2>{{ expense.item }}</h2>
-		<p>in budget: {{ expense.budget }}</p>
-		<p>price: {{ expense.price }}</p>
-		<p>date: {{ expense.date|date }}</p>
-		<p>location: {{ expense.location }}</p>
-		<hr>
+		<div class="solo-page container" style="width: 90%">
+			<section class="small-6 columns">
+				{{ expense.item }}
+				In Budget: {{ expense.budget }}
+				<div class="small-12 medium-9 columns">
+					<h3 class="title">${{ expense.price }} | {{ expense.location }}</h3>
+					<p>Date Spent: {{ expense|date:"m/d/Y" }}</p>
+				</div>
+			</section>
+		</div>
 	{% endfor %}
-</div>
 {% endblock %}

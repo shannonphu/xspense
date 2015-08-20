@@ -10,4 +10,3 @@ Pillow==2.9.0
 psycopg2==2.6.1
 static3==0.6.1
 whitenoise==2.0.3
-psycopg2==2.5.4

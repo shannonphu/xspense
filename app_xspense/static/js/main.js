@@ -21,4 +21,6 @@ $(document).ready(function() {
 	    });
 	}
 
+	$('.landing-content').css('margin-left', $('.landing').width() + 50);
+
 });

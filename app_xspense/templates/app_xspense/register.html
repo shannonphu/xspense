@@ -7,7 +7,7 @@
         
 
         <form id="user_form" method="post" action="/register"
-                enctype="multipart/form-data" class="form col-md-12 center-block">
+                enctype="multipart/form-data" class="form center-block">
             <h1 class="text-center">Register</h1>
             {% csrf_token %}
             {{ user_form.as_p }}

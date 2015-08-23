@@ -40,6 +40,7 @@ p {
   margin-top: -100px;
   min-width: 250px;
   height: 100%;
+  position: fixed;
   text-align: center;
   background: url(../img/walkway.jpg) repeat-y center center;
   background-size: cover;
@@ -51,6 +52,21 @@ p {
 	margin-top: 150px;
 	padding-right: 100px;
   }
+}
+
+.landing-content {
+	padding: 0.5em;
+	p {
+		font-size: 1.3em;
+	}
+	#sample-login {
+		background-color: darkgrey;
+		border: 1px solid white;
+		padding: 0.5em;
+		width: 30%;
+		text-align: center;
+		float: right;
+	}
 }
 
 // NAV BAR CSS
